@@ -1,0 +1,11 @@
+default:
+    type: rest
+    resource: ApiBundle\Controller\DefaultController
+
+user:
+    type: rest
+    resource: ApiBundle\Controller\UserController
+
+task:
+    type: rest
+    resource: ApiBundle\Controller\TaskController

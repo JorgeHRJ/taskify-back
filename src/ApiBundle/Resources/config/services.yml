@@ -1,0 +1,18 @@
+services:
+#    api.example:
+#        class: ApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  api_user_model:
+      class: ApiBundle\Model\UserModel
+      arguments:
+        $entityManager: "@doctrine.orm.entity_manager"
+        $fosUserManager: "@fos_user.user_manager"
+        $container: "@service_container"
+
+  api_task_model:
+      class: ApiBundle\Model\TaskModel
+      arguments:
+        $entityManager: "@doctrine.orm.entity_manager"
+        $container: "@service_container"
+        $paginator: "@knp_paginator"
