@@ -48,7 +48,7 @@ class TaskController extends ApiController
      */
     public function getPaginatedTasksAction(Request $request, $page)
     {
-        $serializer = $this->get('jms_serializer');
+        //$serializer = $this->get('jms_serializer');
         $pageSize   = 10; //default value, but would be nice to be asked at the request
 
         $pagination = $this->get('api_task_model')->getPaginatedTasksByUser($this->getUser(), $page, $pageSize);
